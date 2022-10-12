@@ -61,7 +61,6 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }}
         script: |
-          # Выполняет pull образа с DockerHub
           sudo docker pull ${{ secrets.USER }}/<yamdb:lates
           #остановка всех контейнеров
           sudo docker stop $(sudo docker ps -a -q)
