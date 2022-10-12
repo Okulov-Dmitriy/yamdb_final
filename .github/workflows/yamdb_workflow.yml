@@ -18,6 +18,10 @@ jobs:
         python -m pip install --upgrade pip 
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         pip freeze > requirements.txt
+        pip install virtualenv
+        virtualenv newenv
+        source newenv/bin/activate
+        pip install django
 
     - name: Test with flake8 and django tests
       run: |
