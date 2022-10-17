@@ -16,7 +16,7 @@ services:
       - ./.env
 
   web:
-    build: /home/okulov-dmitriy/
+    build: ./api_yamdb/
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
