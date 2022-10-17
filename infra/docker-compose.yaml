@@ -16,7 +16,7 @@ services:
       - ./.env
 
   web:
-    build: okulov97/yamdb:latest
+    build: /home/okulov-dmitriy/
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
