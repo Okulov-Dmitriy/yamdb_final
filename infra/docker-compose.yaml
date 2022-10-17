@@ -16,7 +16,7 @@ services:
       - ./.env
 
   web:
-    build: ../api_yamdb/
+    build: ${{ secrets.DOCKER_USERNAME }}/yamdb:latest
     restart: always
     volumes:
       # Контейнер web будет работать с данными, хранящиеся в томе static_value, 
